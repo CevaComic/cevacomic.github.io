@@ -1,4 +1,4 @@
-# cevacomic.github
+# cevacomic.github.io
 
 ## Aplicatie HTML5
 
