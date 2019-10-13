@@ -12,6 +12,6 @@ Some code
 
 ```
 <?php
-  echo "Ok pa";
+  error_reporting(0);
 ?>
 ```
