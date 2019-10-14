@@ -1,0 +1,51 @@
+function solve_eq2() {
+	var ec2 = new t_eq2
+
+	ec2.read_coefficients()
+	ec2.compute_solutions()
+	ec2.print_solutions()
+}
+
+class t_eq2 {
+
+	a
+	b
+	c
+	x1_im
+	x2_im
+	x1_re
+	x2_re
+
+	read_coefficients() {
+		this.a = document.getElementById('id_a').value
+		this.b = document.getElementById('id_b').value
+		this.c = document.getElementById('id_c').value
+	}
+
+	compute_solutions(){
+		var delta = this.b * this.b - 4 * this.a * this.c
+
+		if(delta >= 0) {
+			this.x1_re = (-this.b - Math.sqrt(delta))/(2*this.a)
+			this.x2_re = (-this.b + Math.sqrt(delta))/(2*this.a)
+			this.x1_im = this.x2_im = 0
+		} else {
+			this.x1_re = this.x2_re = (-this.b)/(2*this.a)
+			this.x1_im = (-Math.sqrt(-delta))/(2*this.a)
+			this.x2_im = (+Math.sqrt(-delta))/(2*this.a)
+		}
+	}
+
+	print_solutions(){
+		document.getElementById('id_x1').innerHTML = 'x1 = ' + this.x1_re + '+' + this.x1_im + 'i'
+		document.getElementById('id_x2').innerHTML = 'x2 = ' + this.x2_re + '+' + this.x2_im + 'i'
+	}
+}
+
+function version() {
+	var logic_version = '2019.10.14.1'
+	document.getElementById('id_logic_version').innerHTML = "Logic version : " + logic_version
+}
+version()
+
+document.getElementById('id_button').addEventListener('click', solve_eq2)
