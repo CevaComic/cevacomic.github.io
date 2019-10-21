@@ -40,10 +40,10 @@ class t_eq2_model {
 
 	get_solutions() {
 		return {
-			x1_re,
-			x2_re,
-			x1_im,
-			x2_im,
+			x1_re:this.x1_re,
+			x2_re:this.x2_re,
+			x1_im:this.x1_im,
+			x2_im:this.x2_im,
 		}
 	}
 

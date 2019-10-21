@@ -3,8 +3,7 @@ class t_eq2_view {
 	events
 
 	constructor() {
-		this.events
-		document.getElementById('id_button').addEventListener('click', this.on_solve_click)
+		document.getElementById('id_button').addEventListener('click', this.on_solve_click.bind(this))
 	}
 
 	on_solve_click() {
