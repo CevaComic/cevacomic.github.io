@@ -2,18 +2,47 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="gyro.css">
 		<title>Gyroscop</title>
 	</head>
 	<body>
 
-		<p>UI Version: 2019.11.04.0</p>
+		<p>UI Version: 2019.11.04.2</p>
 		<p id="logic_version"></p>
 
-		<p id="id_alpha"></p>
-		<p id="id_beta"></p>
-		<p id="id_gamma"></p>
+		<h1>Gyroscope</h1>
+
+		<div id="gyrocoords">
+
+			<p id="id_alpha"></p>
+			<p id="id_beta"></p>
+			<p id="id_gamma"></p>
+
+		</div>
+
+		<h1>Gravity</h1>
+
+		<div id="gravitycoords">
+
+			<p id="id_x"></p>
+			<p id="id_y"></p>
+			<p id="id_z"></p>
+
+		</div>
+
+		<h1>Rotation</h1>
+
+		<div id="rotationcoords">
+
+			<p id="id_rot_x"></p>
+			<p id="id_rot_y"></p>
+
+		</div>
+
+		<canvas id="canvas" width="354" height="354"></canvas>
 
 		<script type="text/javascript" src="gyro.js"></script>
-		
+
 	</body>
 </html>
