@@ -1,4 +1,4 @@
-document.getElementById('logic_version').innerHTML = "Logic version: 2019.11.04.0"
+document.getElementById('logic_version').innerHTML = "Logic version: 2019.11.04.1"
 
 window.addEventListener('deviceorientation', on_gyro_data_uab)
 
