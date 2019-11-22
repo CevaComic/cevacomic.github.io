@@ -1,8 +1,8 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version = 2019.11.22.0"
+document.getElementById("id_logic_version").innerHTML = "Logic version = 2019.11.22.1"
 
 var video = document.getElementById("id_video")
 
-var camera = { audio: true, video: true }
+var camera = { audio: true, video: {facingMode: "environment"} }
 
 navigator.mediaDevices.getUserMedia(camera).then(on_ok_cam_uab).catch(on_fail_cam_uab)
 
