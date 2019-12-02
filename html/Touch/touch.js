@@ -40,6 +40,11 @@ function touch_move_uab(p) {
 		context.lineWidth = 20
 		context.fill()
 		context.stroke()
+		last_position[down_finger] = {
+			...last_position[down_finger],
+			x: t[i].pageX,
+			y: t[i].pageY,
+		}
 	}
 
 }
