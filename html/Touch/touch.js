@@ -35,7 +35,7 @@ function touch_start_uab(p) {
 		}
 
         context.beginPath()
-        context.arc([t[i]].pageX, t[i].pageY, 10, 0, 2 * Math.PI)
+        context.arc(touch_info.x, touch_info.y, 10, 0, 2 * Math.PI)
 		context.fillStyle = touch_info.color
 		context.strokeStyle = touch_info.color
 		context.lineWidth = 1
