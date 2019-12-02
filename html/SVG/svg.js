@@ -1,10 +1,8 @@
 document.getElementById('logic_version').innerHTML = "Logic version: 2019.12.02.1"
 
-var button = document.getElementById('id_button')
-button.addEventListener('click', request_clicked)
-
 if (typeof DeviceMotionEvent.requestPermission == 'function') {
-
+	var button = document.getElementById('id_button')
+	button.addEventListener('click', request_clicked)
 } else {
 	window.addEventListener('devicemotion', on_motion_data_uab)
 }
