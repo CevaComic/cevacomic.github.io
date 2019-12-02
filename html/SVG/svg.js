@@ -1,6 +1,22 @@
-document.getElementById('logic_version').innerHTML = "Logic version: 2019.12.02.0"
+document.getElementById('logic_version').innerHTML = "Logic version: 2019.12.02.1"
 
-window.addEventListener('devicemotion', on_motion_data_uab)
+var button = document.getElementById('id_button')
+button.addEventListener('click', request_clicked)
+
+if (typeof DeviceMotionEvent.requestPermission == 'function') {
+
+} else {
+	window.addEventListener('devicemotion', on_motion_data_uab)
+}
+
+function request_clicked() {
+	DeviceMotionEvent.requestPermission().then(state => {
+		if(state == 'granted')
+			window.addEventListener('devicemotion', on_motion_data_uab)
+		else
+			alert("Nu ai acordat permisiune")
+	}).catch(error => alert(error))
+}
 
 function on_motion_data_uab(e) {
 	var acc = e.accelerationIncludingGravity
